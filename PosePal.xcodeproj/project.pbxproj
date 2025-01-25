@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2806BC8E2D456FC500EE6EDA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2806BC8A2D456BBE00EE6EDA /* Info.plist */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
 		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
@@ -37,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2806BC8A2D456BBE00EE6EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/andrewxue/Documents/XCODE IOS/PLC/PosePal/Info.plist"; sourceTree = "<absolute>"; };
+		2806BC8F2D4572BD00EE6EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -84,7 +83,6 @@
 		280F0E402D44B1A3008C0FC2 = {
 			isa = PBXGroup;
 			children = (
-				2806BC8A2D456BBE00EE6EDA /* Info.plist */,
 				280F0E772D44B1EB008C0FC2 /* README.md */,
 				280F0E4B2D44B1A3008C0FC2 /* PosePal */,
 				280F0E4A2D44B1A3008C0FC2 /* Products */,
@@ -104,6 +102,7 @@
 		280F0E4B2D44B1A3008C0FC2 /* PosePal */ = {
 			isa = PBXGroup;
 			children = (
+				2806BC8F2D4572BD00EE6EDA /* Info.plist */,
 				280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */,
 				280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */,
 				284487FC2D455AD10087F15B /* Models */,
@@ -251,7 +250,6 @@
 			files = (
 				280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */,
 				280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */,
-				2806BC8E2D456FC500EE6EDA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +446,7 @@
 				DEVELOPMENT_TEAM = 69G4J7D9TY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PosePal/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,6 +478,7 @@
 				DEVELOPMENT_TEAM = 69G4J7D9TY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PosePal/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
