@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import AVFoundation
+import Photos
 
 class CameraViewModel: NSObject, ObservableObject {
     @EnvironmentObject var viewModel: CameraViewModel
@@ -42,9 +43,7 @@ class CameraViewModel: NSObject, ObservableObject {
 }
 
 extension CameraViewModel: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput,
-                    didFinishProcessingPhoto photo: AVCapturePhoto,
-                    error: Error?) {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error {
             print("Error capturing photo: \(error.localizedDescription)")
             return
@@ -56,9 +55,7 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
             return
         }
             
-        // Handle the captured image on main thread
-        DispatchQueue.main.async {
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        }
+        // Save to PosePal album
+        PhotoManager.save(image: image)
     }
 }
