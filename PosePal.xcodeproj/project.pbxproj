@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
-		280F0E4F2D44B1A3008C0FC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */; };
+		280F0E4F2D44B1A3008C0FC2 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* Homeview.swift */; };
 		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
+		280F0E792D45347D008C0FC2 /* Models.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E782D45347D008C0FC2 /* Models.xcassets */; };
+		280F0E7B2D453513008C0FC2 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E7A2D453513008C0FC2 /* Pose.swift */; };
+		280F0E7D2D45352A008C0FC2 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E7C2D45352A008C0FC2 /* Prompt.swift */; };
+		280F0E7F2D453679008C0FC2 /* Views.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E7E2D453679008C0FC2 /* Views.xcassets */; };
+		280F0E812D453686008C0FC2 /* PoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E802D453686008C0FC2 /* PoseView.swift */; };
+		280F0E832D453690008C0FC2 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E822D453690008C0FC2 /* PromptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +39,19 @@
 /* Begin PBXFileReference section */
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
-		280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		280F0E4E2D44B1A3008C0FC2 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		280F0E502D44B1A4008C0FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosePal.entitlements; sourceTree = "<group>"; };
 		280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E642D44B1A5008C0FC2 /* PosePalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E772D44B1EB008C0FC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		280F0E782D45347D008C0FC2 /* Models.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Models.xcassets; sourceTree = "<group>"; };
+		280F0E7A2D453513008C0FC2 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		280F0E7C2D45352A008C0FC2 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		280F0E7E2D453679008C0FC2 /* Views.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Views.xcassets; sourceTree = "<group>"; };
+		280F0E802D453686008C0FC2 /* PoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseView.swift; sourceTree = "<group>"; };
+		280F0E822D453690008C0FC2 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */,
-				280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */,
+				280F0E4E2D44B1A3008C0FC2 /* Homeview.swift */,
+				280F0E782D45347D008C0FC2 /* Models.xcassets */,
+				280F0E7C2D45352A008C0FC2 /* Prompt.swift */,
+				280F0E7A2D453513008C0FC2 /* Pose.swift */,
+				280F0E7E2D453679008C0FC2 /* Views.xcassets */,
+				280F0E822D453690008C0FC2 /* PromptView.swift */,
+				280F0E802D453686008C0FC2 /* PoseView.swift */,
 				280F0E502D44B1A4008C0FC2 /* Assets.xcassets */,
 				280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */,
 				280F0E522D44B1A4008C0FC2 /* Preview Content */,
@@ -210,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280F0E7F2D453679008C0FC2 /* Views.xcassets in Resources */,
+				280F0E792D45347D008C0FC2 /* Models.xcassets in Resources */,
 				280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */,
 				280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */,
 			);
@@ -236,7 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F0E4F2D44B1A3008C0FC2 /* ContentView.swift in Sources */,
+				280F0E7B2D453513008C0FC2 /* Pose.swift in Sources */,
+				280F0E7D2D45352A008C0FC2 /* Prompt.swift in Sources */,
+				280F0E812D453686008C0FC2 /* PoseView.swift in Sources */,
+				280F0E4F2D44B1A3008C0FC2 /* Homeview.swift in Sources */,
+				280F0E832D453690008C0FC2 /* PromptView.swift in Sources */,
 				280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,8 +433,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,8 +461,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
