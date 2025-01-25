@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
+		280F0E4F2D44B1A3008C0FC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */; };
+		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
+		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
+		280F0E5F2D44B1A5008C0FC2 /* PosePalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */; };
+		280F0E692D44B1A5008C0FC2 /* PosePalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */; };
+		280F0E6B2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280F0E5B2D44B1A4008C0FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280F0E412D44B1A3008C0FC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280F0E482D44B1A3008C0FC2;
+			remoteInfo = PosePal;
+		};
+		280F0E652D44B1A5008C0FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280F0E412D44B1A3008C0FC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280F0E482D44B1A3008C0FC2;
+			remoteInfo = PosePal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
+		280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		280F0E502D44B1A4008C0FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosePal.entitlements; sourceTree = "<group>"; };
+		280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalTests.swift; sourceTree = "<group>"; };
+		280F0E642D44B1A5008C0FC2 /* PosePalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalUITests.swift; sourceTree = "<group>"; };
+		280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		280F0E772D44B1EB008C0FC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		280F0E462D44B1A3008C0FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E572D44B1A4008C0FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E612D44B1A5008C0FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		280F0E402D44B1A3008C0FC2 = {
+			isa = PBXGroup;
+			children = (
+				280F0E772D44B1EB008C0FC2 /* README.md */,
+				280F0E4B2D44B1A3008C0FC2 /* PosePal */,
+				280F0E5D2D44B1A5008C0FC2 /* PosePalTests */,
+				280F0E672D44B1A5008C0FC2 /* PosePalUITests */,
+				280F0E4A2D44B1A3008C0FC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		280F0E4A2D44B1A3008C0FC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				280F0E492D44B1A3008C0FC2 /* PosePal.app */,
+				280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */,
+				280F0E642D44B1A5008C0FC2 /* PosePalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		280F0E4B2D44B1A3008C0FC2 /* PosePal */ = {
+			isa = PBXGroup;
+			children = (
+				280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */,
+				280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */,
+				280F0E502D44B1A4008C0FC2 /* Assets.xcassets */,
+				280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */,
+				280F0E522D44B1A4008C0FC2 /* Preview Content */,
+			);
+			path = PosePal;
+			sourceTree = "<group>";
+		};
+		280F0E522D44B1A4008C0FC2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		280F0E5D2D44B1A5008C0FC2 /* PosePalTests */ = {
+			isa = PBXGroup;
+			children = (
+				280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */,
+			);
+			path = PosePalTests;
+			sourceTree = "<group>";
+		};
+		280F0E672D44B1A5008C0FC2 /* PosePalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */,
+				280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */,
+			);
+			path = PosePalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		280F0E482D44B1A3008C0FC2 /* PosePal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280F0E6E2D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePal" */;
+			buildPhases = (
+				280F0E452D44B1A3008C0FC2 /* Sources */,
+				280F0E462D44B1A3008C0FC2 /* Frameworks */,
+				280F0E472D44B1A3008C0FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PosePal;
+			productName = PosePal;
+			productReference = 280F0E492D44B1A3008C0FC2 /* PosePal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		280F0E592D44B1A4008C0FC2 /* PosePalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280F0E712D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePalTests" */;
+			buildPhases = (
+				280F0E562D44B1A4008C0FC2 /* Sources */,
+				280F0E572D44B1A4008C0FC2 /* Frameworks */,
+				280F0E582D44B1A4008C0FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280F0E5C2D44B1A4008C0FC2 /* PBXTargetDependency */,
+			);
+			name = PosePalTests;
+			productName = PosePalTests;
+			productReference = 280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		280F0E632D44B1A5008C0FC2 /* PosePalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280F0E742D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePalUITests" */;
+			buildPhases = (
+				280F0E602D44B1A5008C0FC2 /* Sources */,
+				280F0E612D44B1A5008C0FC2 /* Frameworks */,
+				280F0E622D44B1A5008C0FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280F0E662D44B1A5008C0FC2 /* PBXTargetDependency */,
+			);
+			name = PosePalUITests;
+			productName = PosePalUITests;
+			productReference = 280F0E642D44B1A5008C0FC2 /* PosePalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		280F0E412D44B1A3008C0FC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					280F0E482D44B1A3008C0FC2 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					280F0E592D44B1A4008C0FC2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 280F0E482D44B1A3008C0FC2;
+					};
+					280F0E632D44B1A5008C0FC2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 280F0E482D44B1A3008C0FC2;
+					};
+				};
+			};
+			buildConfigurationList = 280F0E442D44B1A3008C0FC2 /* Build configuration list for PBXProject "PosePal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 280F0E402D44B1A3008C0FC2;
+			productRefGroup = 280F0E4A2D44B1A3008C0FC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				280F0E482D44B1A3008C0FC2 /* PosePal */,
+				280F0E592D44B1A4008C0FC2 /* PosePalTests */,
+				280F0E632D44B1A5008C0FC2 /* PosePalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		280F0E472D44B1A3008C0FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */,
+				280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E582D44B1A4008C0FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E622D44B1A5008C0FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		280F0E452D44B1A3008C0FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280F0E4F2D44B1A3008C0FC2 /* ContentView.swift in Sources */,
+				280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E562D44B1A4008C0FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280F0E5F2D44B1A5008C0FC2 /* PosePalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280F0E602D44B1A5008C0FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280F0E692D44B1A5008C0FC2 /* PosePalUITests.swift in Sources */,
+				280F0E6B2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280F0E5C2D44B1A4008C0FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280F0E482D44B1A3008C0FC2 /* PosePal */;
+			targetProxy = 280F0E5B2D44B1A4008C0FC2 /* PBXContainerItemProxy */;
+		};
+		280F0E662D44B1A5008C0FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280F0E482D44B1A3008C0FC2 /* PosePal */;
+			targetProxy = 280F0E652D44B1A5008C0FC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		280F0E6C2D44B1A5008C0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		280F0E6D2D44B1A5008C0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		280F0E6F2D44B1A5008C0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PosePal/PosePal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PosePal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		280F0E702D44B1A5008C0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PosePal/PosePal.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PosePal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		280F0E722D44B1A5008C0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PosePal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PosePal";
+			};
+			name = Debug;
+		};
+		280F0E732D44B1A5008C0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PosePal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PosePal";
+			};
+			name = Release;
+		};
+		280F0E752D44B1A5008C0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PosePal;
+			};
+			name = Debug;
+		};
+		280F0E762D44B1A5008C0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Andrew.PosePalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PosePal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		280F0E442D44B1A3008C0FC2 /* Build configuration list for PBXProject "PosePal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280F0E6C2D44B1A5008C0FC2 /* Debug */,
+				280F0E6D2D44B1A5008C0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280F0E6E2D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280F0E6F2D44B1A5008C0FC2 /* Debug */,
+				280F0E702D44B1A5008C0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280F0E712D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280F0E722D44B1A5008C0FC2 /* Debug */,
+				280F0E732D44B1A5008C0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280F0E742D44B1A5008C0FC2 /* Build configuration list for PBXNativeTarget "PosePalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280F0E752D44B1A5008C0FC2 /* Debug */,
+				280F0E762D44B1A5008C0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 280F0E412D44B1A3008C0FC2 /* Project object */;
+}
