@@ -45,10 +45,20 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput,
                     didFinishProcessingPhoto photo: AVCapturePhoto,
                     error: Error?) {
+        if let error = error {
+            print("Error capturing photo: \(error.localizedDescription)")
+            return
+        }
+            
         guard let imageData = photo.fileDataRepresentation(),
-              let image = UIImage(data: imageData) else { return }
-        
-        // Save photo to gallery or your app's storage
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                let image = UIImage(data: imageData) else {
+            print("Error converting photo data")
+            return
+        }
+            
+        // Handle the captured image on main thread
+        DispatchQueue.main.async {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
     }
 }
