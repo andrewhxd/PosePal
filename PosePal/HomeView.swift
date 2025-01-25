@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    // Random Prompt
+    @State private var showingRandomPrompt = false
+    @State private var randomPrompt: Prompt?
+    
+    // Prompt Model
+    @StateObject private var promptViewModel = PromptViewModel()
+    
     // Access the current color scheme
     @Environment(\.colorScheme) var colorScheme
     
@@ -35,7 +43,7 @@ struct HomeView: View {
                                 .foregroundColor(.blue)
                                 .fontWeight(.medium)
                             
-                            Text(challenge)
+                            Text(promptViewModel.currentPrompt.title)
                                 .font(.title2)
                                 .fontWeight(.semibold)
                             
@@ -60,26 +68,36 @@ struct HomeView: View {
                         .padding()
                         .background(Color.blue.opacity(0.1))
                         .cornerRadius(16)
-                        .padding(.horizontal)
                         
-                        // Quick Actions
-                        HStack(spacing: 16) {
+                        
+                        HStack(spacing: 17) {
                             QuickActionButton(
                                 title: "Random Prompt",
                                 icon: "shuffle",
-                                action: { /* Handle random */ }
+                                action: {
+                                    randomPrompt = Prompt.getRandomPrompt()
+                                    showingRandomPrompt = true
+                                }
                             )
+                            .alert("Random Prompt", isPresented: $showingRandomPrompt) {
+                               Button("OK", role: .cancel) { }
+                            } message: {
+                               Text(randomPrompt?.title ?? "")
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 50) // Ensures equal width and consistent height
                             
                             QuickActionButton(
                                 title: "My Gallery",
                                 icon: "photo.on.rectangle",
                                 action: { /* Handle gallery */ }
                             )
+                            .frame(maxWidth: .infinity, minHeight: 50) // Ensures equal width and consistent height
                         }
-                        .padding(.horizontal)
+                        .padding()
+    
                         
                         // Recent Memories
-                        VStack(alignment: .leading, spacing: 12) {
+                        VStack(alignment: .leading, spacing: 20) {
                             HStack {
                                 Text("Recent Memories")
                                     .font(.title3)
@@ -95,7 +113,7 @@ struct HomeView: View {
                                 GridItem(.flexible()),
                                 GridItem(.flexible()),
                                 GridItem(.flexible())
-                            ], spacing: 8) {
+                            ], spacing: 12) {
                                 ForEach(0..<6) { _ in
                                     Rectangle()
                                         .fill(colorScheme == .dark ? Color.gray.opacity(0.2) : Color.gray.opacity(0.1))
@@ -109,10 +127,11 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("PosePal")
+            .padding()
             .navigationBarItems(trailing:
                 Button(action: { /* Handle calendar */ }) {
                     Image(systemName: "calendar")
-                        .padding(4)
+                        .padding(10)
                         .background(Color.gray.opacity(0.1))
                         .clipShape(Circle())
                 }

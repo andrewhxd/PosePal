@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2806BC942D4585B200EE6EDA /* PromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BC932D4585B200EE6EDA /* PromptViewModel.swift */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
 		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2806BC8F2D4572BD00EE6EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2806BC902D457D4400EE6EDA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		2806BC932D4585B200EE6EDA /* PromptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptViewModel.swift; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				284487FF2D455AE00087F15B /* Prompt.swift */,
 				284488032D455F060087F15B /* Pose.swift */,
 				284488072D455F7E0087F15B /* CameraViewModel.swift */,
+				2806BC932D4585B200EE6EDA /* PromptViewModel.swift */,
 			);
 			name = Models;
 			path = Views/Models;
@@ -282,6 +285,7 @@
 				2844880A2D455FCA0087F15B /* CameraPreviewView.swift in Sources */,
 				284488062D455F5D0087F15B /* CameraView.swift in Sources */,
 				280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */,
+				2806BC942D4585B200EE6EDA /* PromptViewModel.swift in Sources */,
 				284488082D455F7E0087F15B /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
