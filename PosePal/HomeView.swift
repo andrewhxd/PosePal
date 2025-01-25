@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    // My Gallery Flag
+    @State private var isShowingGallery = false
     
     // Random Prompt
     @State private var showingRandomPrompt = false
@@ -89,8 +91,11 @@ struct HomeView: View {
                             QuickActionButton(
                                 title: "My Gallery",
                                 icon: "photo.on.rectangle",
-                                action: { /* Handle gallery */ }
+                                action: { isShowingGallery = true }
                             )
+                            .sheet(isPresented: $isShowingGallery) {
+                               GalleryView()
+                            }
                             .frame(maxWidth: .infinity, minHeight: 50) // Ensures equal width and consistent height
                         }
                         .padding()
