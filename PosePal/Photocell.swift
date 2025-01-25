@@ -11,36 +11,42 @@ import Photos
 struct PhotoCell: View {
     let asset: PHAsset
     @State private var image: UIImage?
-    
+
     var body: some View {
-        ZStack {
-            if let image = image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                Color.gray.opacity(0.3)
+        GeometryReader { geo in
+            ZStack {
+                if let image = image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                } else {
+                    Color.gray.opacity(0.3) // Placeholder for loading
+                }
+            }
+            .clipped()
+            .cornerRadius(8)
+            .onAppear {
+                loadImage()
             }
         }
-        .clipped()
-        .onAppear(perform: loadImage)
+        .aspectRatio(1, contentMode: .fit)
     }
-    
+
     private func loadImage() {
         let options = PHImageRequestOptions()
-        options.deliveryMode = .opportunistic
-        options.version = .current
-        
+        options.deliveryMode = .highQualityFormat
+        options.isSynchronous = false
+        options.resizeMode = .exact
+
         PHImageManager.default().requestImage(
             for: asset,
-            targetSize: CGSize(width: 300, height: 300),
+            targetSize: CGSize(width: 200, height: 200),
             contentMode: .aspectFill,
             options: options
         ) { result, _ in
-            if let image = result {
-                DispatchQueue.main.async {
-                    self.image = image
-                }
+            DispatchQueue.main.async {
+                self.image = result
             }
         }
     }

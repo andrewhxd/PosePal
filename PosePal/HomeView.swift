@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    // Recent Memories
+    @StateObject private var galleryViewModel = GalleryViewModel()
+    
     // My Gallery Flag
     @State private var isShowingGallery = false
     
@@ -108,9 +111,6 @@ struct HomeView: View {
                                     .font(.title3)
                                     .bold()
                                 Spacer()
-                                Button("View All") {
-                                    // Handle view all action
-                                }
                                 .foregroundColor(.blue)
                             }
                             
@@ -119,11 +119,8 @@ struct HomeView: View {
                                 GridItem(.flexible()),
                                 GridItem(.flexible())
                             ], spacing: 12) {
-                                ForEach(0..<6) { _ in
-                                    Rectangle()
-                                        .fill(colorScheme == .dark ? Color.gray.opacity(0.2) : Color.gray.opacity(0.1))
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .cornerRadius(8)
+                                ForEach(galleryViewModel.getRandomPhotos(count: 6), id: \.localIdentifier) { asset in
+                                    PhotoCell(asset: asset)
                                 }
                             }
                         }
