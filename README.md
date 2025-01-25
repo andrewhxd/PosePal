@@ -16,3 +16,19 @@ So, we aim to tackle this issue by providing people with specific prompts. Forci
 
 ### Impact:
 People will have more meaningful pictures and memories to look back on rather than either looking at a blank photo library due to never having an interest in photos and only now regreting not taking any or having a library filled with meaningless photos.
+
+
+
+---
+# Design Structure
+
+## Home Page:
+**Content**: 
+- Today's prompt
+- Highlights of Past Photos
+- Random Prompt button
+
+## Capture Screen:
+**Content**: 
+- live viewfinder (similar to snapchat homepage)
+

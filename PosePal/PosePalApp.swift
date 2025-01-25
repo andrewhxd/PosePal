@@ -11,7 +11,7 @@ import SwiftUI
 struct PosePalApp: App {
     var body: some Scene {
         WindowGroup {
-            Homeview()
+            HomeView()
         }
     }
 }

@@ -7,90 +7,135 @@
 
 import SwiftUI
 
-struct Homeview: View {
-    @State private var currentPrompt: Prompt? = Prompt.getRandomPrompt()
-
+struct HomeView: View {
+    
+    // Camera Var
+    @StateObject private var cameraViewModel = CameraViewModel()
+    @State private var isShowingCamera = false
+    
+    let challenge = "Strike a pose with your favorite book!"
+    let completedCount = 12
+    
     var body: some View {
-        TabView {
-            // Home Screen
-            VStack(spacing: 20) {
-                // Display the current prompt
-                if let prompt = currentPrompt {
-                    VStack(spacing: 8) {
-                        Text("Today's Prompt")
-                            .font(.headline)
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 24) {
+                    // Today's Challenge Card
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("TODAY'S CHALLENGE")
+                            .font(.caption)
+                            .foregroundColor(.blue)
+                            .fontWeight(.medium)
+                        
+                        Text(challenge)
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        
+                        Text("\(completedCount) friends completed this challenge")
                             .foregroundColor(.gray)
-
-                        Text(prompt.title)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-
-                        Text(prompt.details)
-                            .font(.body)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal)
+                        
+                        Button(action: { isShowingCamera = true }) {
+                            HStack {
+                                Image(systemName: "camera.fill")
+                                Text("Take Challenge")
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                        }
+                        .fullScreenCover(isPresented: $isShowingCamera) {
+                            CameraView().environmentObject(cameraViewModel)
+                        }
                     }
-                } else {
-                    Text("No prompt available.")
-                        .font(.title3)
-                        .foregroundColor(.secondary)
+                    .padding()
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(16)
+                    
+                    // Quick Actions
+                    HStack(spacing: 16) {
+                        QuickActionButton(
+                            title: "Random Prompt",
+                            icon: "shuffle",
+                            action: { /* Handle random */ }
+                        )
+                        
+                        QuickActionButton(
+                            title: "My Gallery",
+                            icon: "photo.on.rectangle",
+                            action: { /* Handle gallery */ }
+                        )
+                    }
+                    
+                    // Recent Memories
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack {
+                            Text("Recent Memories")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                            
+                            Button(action: { /* Handle view all */ }) {
+                                HStack {
+                                    Text("View All")
+                                        .foregroundColor(.blue)
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
+                        
+                        LazyVGrid(columns: [
+                            GridItem(.flexible()),
+                            GridItem(.flexible()),
+                            GridItem(.flexible())
+                        ], spacing: 8) {
+                            ForEach(0..<6) { _ in
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(Color.gray.opacity(0.1))
+                                    .aspectRatio(1, contentMode: .fit)
+                            }
+                        }
+                    }
                 }
+                .padding()
+            }
+            .navigationTitle("PosePal")
+            .navigationBarItems(trailing:
+                Button(action: { /* Handle calendar */ }) {
+                    Image(systemName: "calendar")
+                        .padding(8)
+                        .background(Color.gray.opacity(0.1))
+                        .clipShape(Circle())
+                }
+            )
+        }
+    }
+}
 
-                // Button to generate a random prompt
-                Button(action: {
-                    currentPrompt = Prompt.getRandomPrompt()
-                }) {
-                    Text("Generate Random Prompt")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
+struct QuickActionButton: View {
+    let title: String
+    let icon: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            HStack {
+                Text(title)
+                    .fontWeight(.medium)
+                Spacer()
+                Image(systemName: icon)
             }
             .padding()
-            .tabItem {
-                Label("Home", systemImage: "house.fill")
-            }
-
-            // Prompts Archive Screen
-            PromptArchiveView()
-                .tabItem {
-                    Label("Archive", systemImage: "doc.text.fill")
-                }
-
-            // Memories Library Screen
-            MemoriesLibraryView()
-                .tabItem {
-                    Label("Library", systemImage: "photo.fill")
-                }
+            .frame(maxWidth: .infinity)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(12)
         }
-        // Allow for gesturing across tabs
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
 #Preview {
-    Homeview()
-}
-
-// Placeholder Views for Navigation
-struct PromptArchiveView: View {
-    var body: some View {
-        Text("Prompt Archive")
-            .font(.largeTitle)
-            .navigationTitle("Prompt Archive")
-    }
-}
-
-struct MemoriesLibraryView: View {
-    var body: some View {
-        Text("Memories Library")
-            .font(.largeTitle)
-            .navigationTitle("Memories Library")
-    }
+    HomeView()
 }
