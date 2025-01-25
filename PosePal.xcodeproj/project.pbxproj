@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		2806BC8F2D4572BD00EE6EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2806BC902D457D4400EE6EDA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		280F0E402D44B1A3008C0FC2 = {
 			isa = PBXGroup;
 			children = (
+				2806BC902D457D4400EE6EDA /* Storyboard.storyboard */,
 				280F0E772D44B1EB008C0FC2 /* README.md */,
 				280F0E4B2D44B1A3008C0FC2 /* PosePal */,
 				280F0E4A2D44B1A3008C0FC2 /* Products */,
@@ -448,7 +450,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PosePal/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PosePal needs camera access to take photos for challenges";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PosePal needs photo library access to save your challenge photos";
+				INFOPLIST_KEY_UILaunchStoryboardName = Storyboard.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -480,7 +485,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PosePal/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PosePal needs camera access to take photos for challenges";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PosePal needs photo library access to save your challenge photos";
+				INFOPLIST_KEY_UILaunchStoryboardName = Storyboard.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

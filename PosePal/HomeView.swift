@@ -8,105 +8,111 @@
 import SwiftUI
 
 struct HomeView: View {
+    // Access the current color scheme
+    @Environment(\.colorScheme) var colorScheme
     
-    // Camera Var
+    // Camera Variables
     @StateObject private var cameraViewModel = CameraViewModel()
     @State private var isShowingCamera = false
     
+    // Static content
     let challenge = "Strike a pose with your favorite book!"
     let completedCount = 12
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 24) {
-                    // Today's Challenge Card
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("TODAY'S CHALLENGE")
-                            .font(.caption)
-                            .foregroundColor(.blue)
-                            .fontWeight(.medium)
-                        
-                        Text(challenge)
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                        
-                        Text("\(completedCount) friends completed this challenge")
-                            .foregroundColor(.gray)
-                        
-                        Button(action: { isShowingCamera = true }) {
-                            HStack {
-                                Image(systemName: "camera.fill")
-                                Text("Take Challenge")
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                        }
-                        .fullScreenCover(isPresented: $isShowingCamera) {
-                            CameraView().environmentObject(cameraViewModel)
-                        }
-                    }
-                    .padding()
-                    .background(Color.blue.opacity(0.1))
-                    .cornerRadius(16)
-                    
-                    // Quick Actions
-                    HStack(spacing: 16) {
-                        QuickActionButton(
-                            title: "Random Prompt",
-                            icon: "shuffle",
-                            action: { /* Handle random */ }
-                        )
-                        
-                        QuickActionButton(
-                            title: "My Gallery",
-                            icon: "photo.on.rectangle",
-                            action: { /* Handle gallery */ }
-                        )
-                    }
-                    
-                    // Recent Memories
-                    VStack(alignment: .leading, spacing: 16) {
-                        HStack {
-                            Text("Recent Memories")
-                                .font(.title3)
+            ZStack {
+                // Background Color
+                Color(.systemBackground)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    VStack(spacing: 16) {
+                        // Today's Challenge Card
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("TODAY'S CHALLENGE")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                                .fontWeight(.medium)
+                            
+                            Text(challenge)
+                                .font(.title2)
                                 .fontWeight(.semibold)
                             
-                            Spacer()
+                            Text("\(completedCount) friends completed this challenge")
+                                .foregroundColor(.gray)
                             
-                            Button(action: { /* Handle view all */ }) {
+                            Button(action: { isShowingCamera = true }) {
                                 HStack {
-                                    Text("View All")
-                                        .foregroundColor(.blue)
-                                    Image(systemName: "chevron.right")
-                                        .foregroundColor(.blue)
+                                    Image(systemName: "camera.fill")
+                                    Text("Take Challenge")
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                            }
+                            .fullScreenCover(isPresented: $isShowingCamera) {
+                                CameraView().environmentObject(cameraViewModel)
+                            }
+                        }
+                        .padding()
+                        .background(Color.blue.opacity(0.1))
+                        .cornerRadius(16)
+                        .padding(.horizontal)
+                        
+                        // Quick Actions
+                        HStack(spacing: 16) {
+                            QuickActionButton(
+                                title: "Random Prompt",
+                                icon: "shuffle",
+                                action: { /* Handle random */ }
+                            )
+                            
+                            QuickActionButton(
+                                title: "My Gallery",
+                                icon: "photo.on.rectangle",
+                                action: { /* Handle gallery */ }
+                            )
+                        }
+                        .padding(.horizontal)
+                        
+                        // Recent Memories
+                        VStack(alignment: .leading, spacing: 12) {
+                            HStack {
+                                Text("Recent Memories")
+                                    .font(.title3)
+                                    .bold()
+                                Spacer()
+                                Button("View All") {
+                                    // Handle view all action
+                                }
+                                .foregroundColor(.blue)
+                            }
+                            
+                            LazyVGrid(columns: [
+                                GridItem(.flexible()),
+                                GridItem(.flexible()),
+                                GridItem(.flexible())
+                            ], spacing: 8) {
+                                ForEach(0..<6) { _ in
+                                    Rectangle()
+                                        .fill(colorScheme == .dark ? Color.gray.opacity(0.2) : Color.gray.opacity(0.1))
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .cornerRadius(8)
                                 }
                             }
                         }
-                        
-                        LazyVGrid(columns: [
-                            GridItem(.flexible()),
-                            GridItem(.flexible()),
-                            GridItem(.flexible())
-                        ], spacing: 8) {
-                            ForEach(0..<6) { _ in
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color.gray.opacity(0.1))
-                                    .aspectRatio(1, contentMode: .fit)
-                            }
-                        }
+                        .padding(.horizontal)
                     }
                 }
-                .padding()
             }
             .navigationTitle("PosePal")
             .navigationBarItems(trailing:
                 Button(action: { /* Handle calendar */ }) {
                     Image(systemName: "calendar")
-                        .padding(8)
+                        .padding(4)
                         .background(Color.gray.opacity(0.1))
                         .clipShape(Circle())
                 }
