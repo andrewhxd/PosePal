@@ -14,9 +14,12 @@
 		2806BC9E2D45947300EE6EDA /* Photocell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BC9D2D45947300EE6EDA /* Photocell.swift */; };
 		2806BCA02D459C4E00EE6EDA /* PhotoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BC9F2D459C4E00EE6EDA /* PhotoRow.swift */; };
 		2806BCA22D459CEB00EE6EDA /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCA12D459CEB00EE6EDA /* PhotoDetailView.swift */; };
+		2806BCA42D45A05600EE6EDA /* PP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCA32D45A05600EE6EDA /* PP.png */; };
+		2806BCA82D45A12C00EE6EDA /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCA72D45A12C00EE6EDA /* appstore.png */; };
+		2806BCAA2D45A13100EE6EDA /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCA92D45A13100EE6EDA /* playstore.png */; };
+		2806BCAC2D45A20C00EE6EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
-		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
 		284488002D455AE00087F15B /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284487FF2D455AE00087F15B /* Prompt.swift */; };
 		284488042D455F060087F15B /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284488032D455F060087F15B /* Pose.swift */; };
@@ -52,10 +55,13 @@
 		2806BC9D2D45947300EE6EDA /* Photocell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photocell.swift; sourceTree = "<group>"; };
 		2806BC9F2D459C4E00EE6EDA /* PhotoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRow.swift; sourceTree = "<group>"; };
 		2806BCA12D459CEB00EE6EDA /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		2806BCA32D45A05600EE6EDA /* PP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PP.png; sourceTree = SOURCE_ROOT; };
+		2806BCA72D45A12C00EE6EDA /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		2806BCA92D45A13100EE6EDA /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
+		2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		280F0E502D44B1A4008C0FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosePal.entitlements; sourceTree = "<group>"; };
 		280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +132,10 @@
 				2806BC9F2D459C4E00EE6EDA /* PhotoRow.swift */,
 				284487FC2D455AD10087F15B /* Models */,
 				284487EE2D4545360087F15B /* Views */,
-				280F0E502D44B1A4008C0FC2 /* Assets.xcassets */,
+				2806BCA72D45A12C00EE6EDA /* appstore.png */,
+				2806BCA92D45A13100EE6EDA /* playstore.png */,
+				2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */,
+				2806BCA32D45A05600EE6EDA /* PP.png */,
 				280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */,
 				280F0E522D44B1A4008C0FC2 /* Preview Content */,
 			);
@@ -272,7 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */,
-				280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */,
+				2806BCA82D45A12C00EE6EDA /* appstore.png in Resources */,
+				2806BCA42D45A05600EE6EDA /* PP.png in Resources */,
+				2806BCAA2D45A13100EE6EDA /* playstore.png in Resources */,
+				2806BCAC2D45A20C00EE6EDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
