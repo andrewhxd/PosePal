@@ -11,9 +11,6 @@
 		280F0E4F2D44B1A3008C0FC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* ContentView.swift */; };
 		280F0E512D44B1A4008C0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E502D44B1A4008C0FC2 /* Assets.xcassets */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
-		280F0E5F2D44B1A5008C0FC2 /* PosePalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */; };
-		280F0E692D44B1A5008C0FC2 /* PosePalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */; };
-		280F0E6B2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +38,7 @@
 		280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosePal.entitlements; sourceTree = "<group>"; };
 		280F0E5A2D44B1A4008C0FC2 /* PosePalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalTests.swift; sourceTree = "<group>"; };
 		280F0E642D44B1A5008C0FC2 /* PosePalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosePalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalUITests.swift; sourceTree = "<group>"; };
-		280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		280F0E772D44B1EB008C0FC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +72,6 @@
 			children = (
 				280F0E772D44B1EB008C0FC2 /* README.md */,
 				280F0E4B2D44B1A3008C0FC2 /* PosePal */,
-				280F0E5D2D44B1A5008C0FC2 /* PosePalTests */,
-				280F0E672D44B1A5008C0FC2 /* PosePalUITests */,
 				280F0E4A2D44B1A3008C0FC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,23 +104,6 @@
 				280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		280F0E5D2D44B1A5008C0FC2 /* PosePalTests */ = {
-			isa = PBXGroup;
-			children = (
-				280F0E5E2D44B1A5008C0FC2 /* PosePalTests.swift */,
-			);
-			path = PosePalTests;
-			sourceTree = "<group>";
-		};
-		280F0E672D44B1A5008C0FC2 /* PosePalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				280F0E682D44B1A5008C0FC2 /* PosePalUITests.swift */,
-				280F0E6A2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift */,
-			);
-			path = PosePalUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F0E5F2D44B1A5008C0FC2 /* PosePalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280F0E692D44B1A5008C0FC2 /* PosePalUITests.swift in Sources */,
-				280F0E6B2D44B1A5008C0FC2 /* PosePalUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
