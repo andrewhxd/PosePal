@@ -49,4 +49,24 @@ class NetworkManager {
             return Prompt.samplePrompts[0]
         }
     }
+     
+    func fetchRandomTip() async throws -> String {
+        guard let url = URL(string: "\(baseURL)/prompt/tip") else {
+            throw NetworkError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        // Update this struct if the JSON structure from your server differs
+        struct RandomTipResponse: Decodable {
+            let tip: String
+        }
+        
+        do {
+            let response = try JSONDecoder().decode(RandomTipResponse.self, from: data)
+            return response.tip
+        } catch {
+            throw NetworkError.decodingError
+        }
+    }
 }
