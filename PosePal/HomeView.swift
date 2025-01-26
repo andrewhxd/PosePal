@@ -28,6 +28,9 @@ struct HomeView: View {
     @StateObject private var cameraViewModel = CameraViewModel()
     @State private var isShowingCamera = false
     
+    // Photo Tips
+    @State private var showTips = false
+    
     // Static content
     let challenge = "Strike a pose with your favorite book!"
     let completedCount = 12
@@ -135,7 +138,7 @@ struct HomeView: View {
                                 Spacer()
                             }
                             
-                            CarouselView(photos: galleryViewModel.getRandomPhotos(count: 6))
+                            CarouselView(photos: galleryViewModel.getRandomPhotos(count: 6), tags:[])
                                 .padding()
                         }
                         .padding(.horizontal)
@@ -145,13 +148,16 @@ struct HomeView: View {
             .navigationTitle("PosePal")
             .padding()
             .navigationBarItems(trailing:
-                Button(action: { /* Handle calendar */ }) {
-                    Image(systemName: "calendar")
+                Button(action: { showTips = true }) {
+                    Image(systemName: "info")
                         .padding(10)
                         .background(Color.gray.opacity(0.1))
                         .clipShape(Circle())
                 }
             )
+            .sheet(isPresented: $showTips) {
+                                    PhotographyTipsView()
+                                }
         }
     }
 }

@@ -23,6 +23,7 @@
 		2806BCB42D4698FF00EE6EDA /* PhotoTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB32D4698FF00EE6EDA /* PhotoTag.swift */; };
 		2806BCB62D46995400EE6EDA /* TagEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB52D46995400EE6EDA /* TagEditorView.swift */; };
 		2806BCB82D469A2500EE6EDA /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB72D469A2500EE6EDA /* CarouselView.swift */; };
+		2806BCBA2D46A2A800EE6EDA /* PhotographyTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		2806BCB32D4698FF00EE6EDA /* PhotoTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTag.swift; sourceTree = "<group>"; };
 		2806BCB52D46995400EE6EDA /* TagEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEditorView.swift; sourceTree = "<group>"; };
 		2806BCB72D469A2500EE6EDA /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographyTipsView.swift; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				284487EF2D4545360087F15B /* PoseView.swift */,
 				284487F02D4545360087F15B /* PromptView.swift */,
 				284488052D455F5D0087F15B /* CameraView.swift */,
+				2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */,
 				2806BCB72D469A2500EE6EDA /* CarouselView.swift */,
 				2806BCB52D46995400EE6EDA /* TagEditorView.swift */,
 				284488092D455FCA0087F15B /* CameraPreviewView.swift */,
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2806BCBA2D46A2A800EE6EDA /* PhotographyTipsView.swift in Sources */,
 				2806BCB02D46979200EE6EDA /* PromptResponse.swift in Sources */,
 				284488042D455F060087F15B /* Pose.swift in Sources */,
 				2806BCB62D46995400EE6EDA /* TagEditorView.swift in Sources */,
