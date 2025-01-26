@@ -9,14 +9,24 @@ import SwiftUI
 import Photos
 
 class GalleryViewModel: ObservableObject {
-    @Published var showingDetail = false
-    @Published var selectedAsset: PHAsset?
     @Published var photos: [PHAsset] = []
+    @Published var searchText = ""
+    @Published var selectedPhoto: PHAsset?
+    @Published var showingTagEditor = false
    
    init() {
        loadPhotos()
    }
-   
+
+    var filteredPhotos: [PHAsset] {
+        if searchText.isEmpty {
+            return photos
+        }
+        return photos.filter { asset in
+            let tags = PhotoManager.getPhotoTags(photoId: asset.localIdentifier)
+            return tags.contains { $0.name.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
    func loadPhotos() {
        PHPhotoLibrary.requestAuthorization { status in
            guard status == .authorized else { return }

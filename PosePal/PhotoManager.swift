@@ -64,3 +64,32 @@ class PhotoManager {
         }
     }
 }
+
+extension PhotoManager {
+    static func savePhotoTags(photoId: String, tags: Set<PhotoTag>) {
+        let defaults = UserDefaults.standard
+        var photoTags = [String: [String]]()
+        
+        if let saved = defaults.object(forKey: "PhotoTags") as? Data,
+           let loadedTags = try? JSONDecoder().decode([String: [String]].self, from: saved) {
+            photoTags = loadedTags
+        }
+        
+        photoTags[photoId] = Array(tags.map { $0.name })
+        
+        if let encoded = try? JSONEncoder().encode(photoTags) {
+            defaults.set(encoded, forKey: "PhotoTags")
+        }
+    }
+    
+    static func getPhotoTags(photoId: String) -> Set<PhotoTag> {
+        let defaults = UserDefaults.standard
+        guard let saved = defaults.object(forKey: "PhotoTags") as? Data,
+              let loadedTags = try? JSONDecoder().decode([String: [String]].self, from: saved),
+              let tags = loadedTags[photoId] else {
+            return []
+        }
+        
+        return Set(tags.map { PhotoTag(name: $0) })
+    }
+}

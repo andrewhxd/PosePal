@@ -20,6 +20,8 @@
 		2806BCAC2D45A20C00EE6EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */; };
 		2806BCAE2D4680A400EE6EDA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCAD2D4680A400EE6EDA /* NetworkManager.swift */; };
 		2806BCB02D46979200EE6EDA /* PromptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCAF2D46979200EE6EDA /* PromptResponse.swift */; };
+		2806BCB42D4698FF00EE6EDA /* PhotoTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB32D4698FF00EE6EDA /* PhotoTag.swift */; };
+		2806BCB62D46995400EE6EDA /* TagEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB52D46995400EE6EDA /* TagEditorView.swift */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2806BCAD2D4680A400EE6EDA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2806BCAF2D46979200EE6EDA /* PromptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptResponse.swift; sourceTree = "<group>"; };
+		2806BCB32D4698FF00EE6EDA /* PhotoTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTag.swift; sourceTree = "<group>"; };
+		2806BCB52D46995400EE6EDA /* TagEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEditorView.swift; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				284487EF2D4545360087F15B /* PoseView.swift */,
 				284487F02D4545360087F15B /* PromptView.swift */,
 				284488052D455F5D0087F15B /* CameraView.swift */,
+				2806BCB52D46995400EE6EDA /* TagEditorView.swift */,
 				284488092D455FCA0087F15B /* CameraPreviewView.swift */,
 				2806BC992D458F4F00EE6EDA /* GalleryView.swift */,
 				2806BCA12D459CEB00EE6EDA /* PhotoDetailView.swift */,
@@ -173,6 +178,7 @@
 			children = (
 				284487FF2D455AE00087F15B /* Prompt.swift */,
 				284488032D455F060087F15B /* Pose.swift */,
+				2806BCB32D4698FF00EE6EDA /* PhotoTag.swift */,
 				2806BCAF2D46979200EE6EDA /* PromptResponse.swift */,
 				284488072D455F7E0087F15B /* CameraViewModel.swift */,
 				2806BC932D4585B200EE6EDA /* PromptViewModel.swift */,
@@ -317,6 +323,7 @@
 			files = (
 				2806BCB02D46979200EE6EDA /* PromptResponse.swift in Sources */,
 				284488042D455F060087F15B /* Pose.swift in Sources */,
+				2806BCB62D46995400EE6EDA /* TagEditorView.swift in Sources */,
 				284488002D455AE00087F15B /* Prompt.swift in Sources */,
 				2806BCA22D459CEB00EE6EDA /* PhotoDetailView.swift in Sources */,
 				280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */,
@@ -326,6 +333,7 @@
 				284488062D455F5D0087F15B /* CameraView.swift in Sources */,
 				280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */,
 				2806BC9C2D45945000EE6EDA /* GalleryViewModel.swift in Sources */,
+				2806BCB42D4698FF00EE6EDA /* PhotoTag.swift in Sources */,
 				2806BC942D4585B200EE6EDA /* PromptViewModel.swift in Sources */,
 				284488082D455F7E0087F15B /* CameraViewModel.swift in Sources */,
 				2806BCAE2D4680A400EE6EDA /* NetworkManager.swift in Sources */,
