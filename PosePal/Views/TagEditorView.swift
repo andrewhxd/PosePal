@@ -8,11 +8,17 @@
 import SwiftUI
 import Photos
 
+import SwiftUI
+import Photos
+
 struct TagEditorView: View {
     let asset: PHAsset
     @State private var tags: Set<PhotoTag>
     @State private var newTag = ""
     @Environment(\.dismiss) var dismiss
+    
+    // 1) Track when we should show fullscreen
+    @State private var isShowingFullScreen = false
     
     init(asset: PHAsset) {
         self.asset = asset
@@ -22,18 +28,33 @@ struct TagEditorView: View {
     var body: some View {
         NavigationView {
             List {
+                // Photo section at the top
+                Section {
+                    // 2) Tap gesture to trigger fullscreen
+                    PhotoCell(asset: asset)
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                        .listRowInsets(EdgeInsets())
+                        .onTapGesture {
+                            isShowingFullScreen = true
+                        }
+                }
+                
+                // Add Tag section
                 Section("Add Tag") {
                     HStack {
                         TextField("New tag", text: $newTag)
                         Button("Add") {
-                            if !newTag.isEmpty {
-                                tags.insert(PhotoTag(name: newTag))
-                                newTag = ""
-                            }
+                            let trimmedTag = newTag.trimmingCharacters(in: .whitespacesAndNewlines)
+                            guard !trimmedTag.isEmpty else { return }
+                            tags.insert(PhotoTag(name: trimmedTag))
+                            newTag = ""
                         }
                     }
                 }
                 
+                // Current Tags section
                 Section("Current Tags") {
                     ForEach(Array(tags), id: \.self) { tag in
                         Text(tag.name)
@@ -54,6 +75,11 @@ struct TagEditorView: View {
                     dismiss()
                 }
             )
+            // 3) Fullscreen cover that shows the tapped photo
+            .fullScreenCover(isPresented: $isShowingFullScreen) {
+                FullScreenPhotoView(asset: asset, tags: []) // or pass actual tags if needed
+            }
         }
     }
 }
+
