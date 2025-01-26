@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct DailyPromptResponse: Codable {
+    let prompt: String
+}
+
+struct RandomPromptResponse: Codable {
+    let random_prompt: String
+}

@@ -14,10 +14,13 @@ struct CameraView: View {
     
     var body: some View {
         ZStack {
-            // Camera preview
             CameraPreviewView(session: viewModel.session)
-                .ignoresSafeArea()
-                .background(.black) // Add this to see if camera is loading
+                            .ignoresSafeArea()
+                            .background(.black) // Add this to see if camera is loading
+                            .onTapGesture(count: 2) {
+                                viewModel.switchCamera()
+                            }
+            
             
             // Controls overlay
             VStack {

@@ -43,34 +43,54 @@ struct HomeView: View {
                     VStack(spacing: 16) {
                         // Today's Challenge Card
                         VStack(alignment: .leading, spacing: 12) {
+                            
                             Text("TODAY'S CHALLENGE")
                                 .font(.caption)
                                 .foregroundColor(.blue)
                                 .fontWeight(.medium)
+                                .padding()
                             
-                            Text(promptViewModel.currentPrompt.title)
-                                .font(.title2)
-                                .fontWeight(.semibold)
-                            
-                            Text("\(completedCount) friends completed this challenge")
-                                .foregroundColor(.gray)
-                            
+                            if promptViewModel.isLoading {
+                                ProgressView()
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                            } else if let error = promptViewModel.errorMessage {
+                                VStack {
+                                    Text(error)
+                                        .foregroundColor(.red)
+                                    Button("Try Again") {
+                                        Task {
+                                            await promptViewModel.fetchTodaysPrompt()
+                                        }
+                                    }
+                                    
+                                }
+                            } else {
+                                Text(promptViewModel.currentPrompt.title)
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                
+                                Text("\(completedCount) friends completed this challenge")
+                                    .foregroundColor(.gray)
+                                
+                                // Camera button...
+                            }
                             Button(action: { isShowingCamera = true }) {
                                 HStack {
-                                    Image(systemName: "camera.fill")
-                                    Text("Take Challenge")
-                                }
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                            }
-                            .fullScreenCover(isPresented: $isShowingCamera) {
-                                CameraView().environmentObject(cameraViewModel)
+                                     Image(systemName: "camera.fill")
+                                                            Text("Take Challenge")
+                                                            }
+                                                            .frame(maxWidth: .infinity)
+                                                            .padding()
+                                                            .background(Color.blue)
+                                                            .foregroundColor(.white)
+                                                            .cornerRadius(12)
+                                                        }
+                                                        .fullScreenCover(isPresented: $isShowingCamera) {
+                                                            CameraView().environmentObject(cameraViewModel)
                             }
                         }
-                        .padding()
+                        .padding(2)
                         .background(Color.blue.opacity(0.1))
                         .cornerRadius(16)
                         
@@ -80,8 +100,10 @@ struct HomeView: View {
                                 title: "Random Prompt",
                                 icon: "shuffle",
                                 action: {
-                                    randomPrompt = Prompt.getRandomPrompt()
-                                    showingRandomPrompt = true
+                                    Task {
+                                        randomPrompt = await promptViewModel.fetchRandomPrompt()
+                                        showingRandomPrompt = true
+                                    }
                                 }
                             )
                             .alert("Random Prompt", isPresented: $showingRandomPrompt) {

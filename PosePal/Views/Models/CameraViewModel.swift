@@ -9,13 +9,33 @@ import AVFoundation
 import Photos
 
 class CameraViewModel: NSObject, ObservableObject {
-    @EnvironmentObject var viewModel: CameraViewModel
     @Published var session = AVCaptureSession()
+    @Published var cameraPosition: AVCaptureDevice.Position = .back
     private let output = AVCapturePhotoOutput()
-    
+        
     override init() {
         super.init()
         setupCamera()
+    }
+        
+    func switchCamera() {
+        session.beginConfiguration()
+            
+        // Remove existing input
+        session.inputs.forEach { session.removeInput($0) }
+            
+        // Switch position
+        cameraPosition = cameraPosition == .back ? .front : .back
+            
+        // Setup new camera
+        if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: cameraPosition),
+            let input = try? AVCaptureDeviceInput(device: device) {
+            if session.canAddInput(input) {
+                session.addInput(input)
+            }
+        }
+            
+        session.commitConfiguration()
     }
     
     func setupCamera() {
