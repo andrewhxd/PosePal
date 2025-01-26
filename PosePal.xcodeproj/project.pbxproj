@@ -26,7 +26,8 @@
 		2806BCBA2D46A2A800EE6EDA /* PhotographyTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */; };
 		2806BCBC2D46A88A00EE6EDA /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCBB2D46A88A00EE6EDA /* Tip.swift */; };
 		2806BCBE2D46AE8B00EE6EDA /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCBD2D46AE8B00EE6EDA /* GIFView.swift */; };
-		2806BCC02D46AF1100EE6EDA /* myLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCBF2D46AF1100EE6EDA /* myLoading.gif */; };
+		2806BCC22D46AFEF00EE6EDA /* MyLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806BCC12D46AFEF00EE6EDA /* MyLoadingView.swift */; };
+		2806BCC42D46B18600EE6EDA /* myLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2806BCC32D46B18600EE6EDA /* myLoading.gif */; };
 		280F0E4D2D44B1A3008C0FC2 /* PosePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */; };
 		280F0E4F2D44B1A3008C0FC2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */; };
 		280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280F0E532D44B1A4008C0FC2 /* Preview Assets.xcassets */; };
@@ -76,7 +77,8 @@
 		2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographyTipsView.swift; sourceTree = "<group>"; };
 		2806BCBB2D46A88A00EE6EDA /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		2806BCBD2D46AE8B00EE6EDA /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
-		2806BCBF2D46AF1100EE6EDA /* myLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = myLoading.gif; sourceTree = "<group>"; };
+		2806BCC12D46AFEF00EE6EDA /* MyLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoadingView.swift; sourceTree = "<group>"; };
+		2806BCC32D46B18600EE6EDA /* myLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = myLoading.gif; path = ../../../../../Desktop/myLoading.gif; sourceTree = "<group>"; };
 		280F0E492D44B1A3008C0FC2 /* PosePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F0E4C2D44B1A3008C0FC2 /* PosePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosePalApp.swift; sourceTree = "<group>"; };
 		280F0E4E2D44B1A3008C0FC2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -154,7 +156,7 @@
 				2806BCA72D45A12C00EE6EDA /* appstore.png */,
 				2806BCA92D45A13100EE6EDA /* playstore.png */,
 				2806BCAB2D45A20C00EE6EDA /* Assets.xcassets */,
-				2806BCBF2D46AF1100EE6EDA /* myLoading.gif */,
+				2806BCC32D46B18600EE6EDA /* myLoading.gif */,
 				2806BCA32D45A05600EE6EDA /* PP.png */,
 				280F0E552D44B1A4008C0FC2 /* PosePal.entitlements */,
 				280F0E522D44B1A4008C0FC2 /* Preview Content */,
@@ -176,6 +178,7 @@
 				284487EF2D4545360087F15B /* PoseView.swift */,
 				284487F02D4545360087F15B /* PromptView.swift */,
 				2806BCBD2D46AE8B00EE6EDA /* GIFView.swift */,
+				2806BCC12D46AFEF00EE6EDA /* MyLoadingView.swift */,
 				284488052D455F5D0087F15B /* CameraView.swift */,
 				2806BCB92D46A2A800EE6EDA /* PhotographyTipsView.swift */,
 				2806BCB72D469A2500EE6EDA /* CarouselView.swift */,
@@ -310,9 +313,9 @@
 				280F0E542D44B1A4008C0FC2 /* Preview Assets.xcassets in Resources */,
 				2806BCA82D45A12C00EE6EDA /* appstore.png in Resources */,
 				2806BCA42D45A05600EE6EDA /* PP.png in Resources */,
+				2806BCC42D46B18600EE6EDA /* myLoading.gif in Resources */,
 				2806BCAA2D45A13100EE6EDA /* playstore.png in Resources */,
 				2806BCAC2D45A20C00EE6EDA /* Assets.xcassets in Resources */,
-				2806BCC02D46AF1100EE6EDA /* myLoading.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +342,7 @@
 			files = (
 				2806BCBA2D46A2A800EE6EDA /* PhotographyTipsView.swift in Sources */,
 				2806BCB02D46979200EE6EDA /* PromptResponse.swift in Sources */,
+				2806BCC22D46AFEF00EE6EDA /* MyLoadingView.swift in Sources */,
 				284488042D455F060087F15B /* Pose.swift in Sources */,
 				2806BCBE2D46AE8B00EE6EDA /* GIFView.swift in Sources */,
 				2806BCBC2D46A88A00EE6EDA /* Tip.swift in Sources */,
