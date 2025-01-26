@@ -33,7 +33,7 @@ struct HomeView: View {
     
     // Static content
     let challenge = "Strike a pose with your favorite book!"
-    let completedCount = 12
+    let completedCount = Int.random(in: 15...150)
     
     var body: some View {
         NavigationView {
