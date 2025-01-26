@@ -1,4 +1,5 @@
-# 📸📣 PosePal: The Ultimate Photo Hack You Didn't Know You Needed! 😱  
+# 📸📣 PosePal: The Ultimate Photo Hack You Didn't Know You Needed! 😱 
+By: Andrew Xue, Taranveer Anand, Ethan Wang, Aditya Dubey 
 
 Ever hold your phone, ready to take a pic, but suddenly freeze? 🤯 What pose? What angle? What even IS a good photo?  
 
