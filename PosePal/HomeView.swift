@@ -133,18 +133,10 @@ struct HomeView: View {
                                     .font(.title3)
                                     .bold()
                                 Spacer()
-                                .foregroundColor(.blue)
                             }
                             
-                            LazyVGrid(columns: [
-                                GridItem(.flexible()),
-                                GridItem(.flexible()),
-                                GridItem(.flexible())
-                            ], spacing: 12) {
-                                ForEach(galleryViewModel.getRandomPhotos(count: 6), id: \.localIdentifier) { asset in
-                                    PhotoCell(asset: asset)
-                                }
-                            }
+                            CarouselView(photos: galleryViewModel.getRandomPhotos(count: 6))
+                                .padding()
                         }
                         .padding(.horizontal)
                     }
