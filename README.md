@@ -37,19 +37,6 @@ Let’s be real: It’s NOT about **how many** photos you take… it’s about t
 
 ---
 
-# 🎞️ **But Wait… We’re Also Bringing Back DISPOSABLE CAMERAS!** 🤯  
-
-Yes, you read that right! We’re going **old-school meets new-school.**  
-Not only will PosePal give you **photo prompts on your phone**, but we’re also making a **PHYSICAL DISPOSABLE CAMERA** 🎥 that works **just like the app!**  
-
-🔹 **Scan a QR code on the camera** to get a **random prompt.**  
-🔹 **Snap your shot**—no do-overs, just raw, authentic moments.  
-🔹 **Develop your photos later** and see how your creativity unfolded!  
-
-**THIS ISN’T JUST A CAMERA… IT’S A WHOLE EXPERIENCE.** 🚀🎞️  
-
----
-
 # 🏗️ How It Works – So Easy, It’s Almost Cheating 😏  
 
 ## 📌 Home Page – Your Creative Hub 🎨  
